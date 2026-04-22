@@ -17,3 +17,4 @@ extras/
 # Personal sprint tracking (Jacob — not for repo)
 FINAL_SPRINT.md
 
+venv/
