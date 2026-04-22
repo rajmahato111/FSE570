@@ -139,14 +139,17 @@ surfacing 88 cross-check conflicts. Output generation and the analyst
 narrative take the final 0.6 seconds. Total: 2.7 seconds, with an
 overall confidence score of 0.81.
 
-[ Hand off to Aditya ]
+[ Hand off to Jacob ]
 
+Slide 10 - Demo (Jacob) TBD
+
+[Handoff to Aditya]
 ================================================================
-ADITYA POKHARNA — Slides 10, 11, 12, 13
+ADITYA POKHARNA — Slides 11, 12, 13, 14,15
 ================================================================
 
 ------------------------------------------------------------------------
-Slide 10 — Evaluation: Per-Entity Metrics                      [~25 sec]
+Slide 11 — Evaluation: Per-Entity Metrics                      [~25 sec]
 ------------------------------------------------------------------------
 
 Across all five entities — Tesla, Ford, Boeing, Alphabet, and JPMorgan
@@ -158,7 +161,7 @@ sparser than for tech and finance. Every entity achieves full source
 coverage — no investigation returns a partial result.
 
 ------------------------------------------------------------------------
-Slide 11 — Speedup, Confidence & Test Coverage                 [~25 sec]
+Slide 12 — Speedup, Confidence & Test Coverage                 [~25 sec]
 ------------------------------------------------------------------------
 
 The 3,100-times speedup breaks down by task. SEC review alone is 1,800
@@ -169,7 +172,7 @@ at 0.30. The system is backed by 219 unit tests spanning all eight
 layers, from raw connectors through to the LLM narrative module.
 
 ------------------------------------------------------------------------
-Slide 12 — Evaluation Framework                                [~20 sec]
+Slide 13 — Evaluation Framework                                [~20 sec]
 ------------------------------------------------------------------------
 
 Five formal evaluation criteria were applied. Correctness and depth:
@@ -181,7 +184,7 @@ and a full deployment runbook. Speed: 3,100 times faster than manual.
 All five criteria are met.
 
 ------------------------------------------------------------------------
-Slide 13 — Design Decisions                                    [~30 sec]
+Slide 14 — Design Decisions                                    [~30 sec]
 ------------------------------------------------------------------------
 
 Six decisions shaped the architecture. LLM drives orchestration, but
@@ -195,40 +198,11 @@ rather than disappearing silently. Every LLM call validates against a
 JSON schema with retry-on-failure. And the system deploys to Render.com
 with no external dependencies at runtime.
 
-[ Hand off to Jacob ]
-
-================================================================
-JACOB KURIAKOSE — Slide 14 + Demo         [ PLACEHOLDER ]
-================================================================
 
 ------------------------------------------------------------------------
-Slide 14 — The Team                              [~20 sec + demo time]
+Slide 15 — The Team                              [~20 sec + demo time]
 ------------------------------------------------------------------------
 
-[ PLACEHOLDER — Jacob to fill in ]
+Aditya will say thank you.
 
-Suggested content:
-  - Brief team introduction (~10 sec — the slide already shows each
-    person's name and area).
-  - Transition line into the demo:
-    "Let me show you what this looks like in practice."
 
-Demo walkthrough (suggested 2–3 min):
-  1. Open  https://osint-investigation-swarm.onrender.com
-  2. Type:  Investigate Tesla for money laundering  →  Submit
-  3. Overview tab  — point to the LLM narrative and key risk metrics
-  4. Knowledge Graph tab  — highlight the interactive canvas
-  5. Evidence tab  — scroll to show citation links
-  6. Close with:  "Happy to take any questions."
-
-================================================================
-DELIVERY NOTES
-================================================================
-
-  - Pace: ~150 words per minute gives a clear, deliberate delivery.
-  - Transitions: end each section with the hand-off line shown above
-    so the switch between speakers feels intentional.
-  - Slide 14 / Demo: Jacob fills in the placeholder before the day.
-  - The 6-minute target covers slides 1–13 only. The demo is
-    additional time on top of that.
-  - Q&A: plan for ~2 minutes after the demo closes.
