@@ -19,7 +19,7 @@ import pytest
 from osint_swarm.data_sources.ofac import (
     OfacError,
     _normalize,
-    _names_match,
+    _terms_match,
     parse_sdn_entries,
     search_entries,
 )
@@ -216,36 +216,36 @@ def test_normalize_collapses_spaces():
 # Matching function tests
 # ---------------------------------------------------------------------------
 
-def test_names_match_exact():
-    assert _names_match("blackrock trading", "blackrock trading") is True
+def test_terms_match_exact():
+    assert _terms_match("blackrock trading", "blackrock trading") is True
 
 
-def test_names_match_query_in_target():
-    assert _names_match("blackrock", "blackrock trading corp") is True
+def test_terms_match_query_in_target():
+    assert _terms_match("blackrock", "blackrock trading corp") is True
 
 
-def test_names_match_target_in_query():
+def test_terms_match_target_in_query():
     # Searching for "BLACKROCK TRADING CORP" matches shorter SDN entry "BLACKROCK"
-    assert _names_match("blackrock trading corp", "blackrock") is True
+    assert _terms_match("blackrock trading corp", "blackrock") is True
 
 
-def test_names_match_false_positive_oxford_vs_ford():
+def test_terms_match_false_positive_oxford_vs_ford():
     # "ford" should NOT match "oxford" because "ford" is NOT a whole word in "oxford"
-    assert _names_match("ford", "oxford financial") is False
+    assert _terms_match("ford", "oxford financial") is False
 
 
-def test_names_match_false_positive_stanford():
-    assert _names_match("ford", "stanford chemicals") is False
+def test_terms_match_false_positive_stanford():
+    assert _terms_match("ford", "stanford chemicals") is False
 
 
-def test_names_match_too_short_query():
+def test_terms_match_too_short_query():
     # Terms shorter than 5 chars don't trigger substring rule
-    assert _names_match("ba", "bagram air base") is False
+    assert _terms_match("ba", "bagram air base") is False
 
 
-def test_names_match_case_handled_before_call():
-    # _names_match works on already-normalized (lowercased) strings
-    assert _names_match("global motors", "global motors export") is True
+def test_terms_match_case_handled_before_call():
+    # _terms_match works on already-normalized (lowercased) strings
+    assert _terms_match("global motors", "global motors export") is True
 
 
 # ---------------------------------------------------------------------------
