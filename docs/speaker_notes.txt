@@ -9,8 +9,8 @@ SPEAKER OVERVIEW
   Taljinder Singh   Slides 1–3    Introduction, Problem, Deliverables     ~1 min 30 sec
   Arnab Mitra       Slides 4–6    Architecture, Diagram, LLM Integration   ~1 min 30 sec
   Raj Kumar Mahto   Slides 7–9    Data Sources, Agents, Pipeline           ~1 min 30 sec
-  Aditya Pokharna   Slides 11–14  Evaluation (×3), Design Decisions, Limitations  ~1 min 30 sec
-  Jacob Kuriakose   Slide 10 (Demo) + Slide 15  Demo + Team close         [PLACEHOLDER]
+  Aditya Pokharna   Slides 11–15  Evaluation (×3), Design Decisions, Limitations, Conclusion  ~1 min 45 sec
+  Jacob Kuriakose   Slide 10 (Demo) + Slide 16  Demo + Team close         [PLACEHOLDER]
 
 ================================================================
 TALJINDER SINGH — Slides 1, 2, 3
@@ -145,7 +145,7 @@ Slide 10 - Demo (Jacob) TBD
 
 [Handoff to Aditya]
 ================================================================
-ADITYA POKHARNA — Slides 11, 12, 13, 14
+ADITYA POKHARNA — Slides 11, 12, 13, 14, 15
 ================================================================
 
 ------------------------------------------------------------------------
@@ -217,12 +217,28 @@ query time. And longer term, integrating licensed sources like
 OpenCorporates or Dun & Bradstreet to cover private and international
 entities.
 
+------------------------------------------------------------------------
+Slide 15 — Conclusion                                          [~25 sec]
+------------------------------------------------------------------------
+
+Three things to take away from today. What we built: a seven-layer,
+multi-agent system that converts a plain-English query into a fully
+cited financial misconduct report, pulling from four public sources in
+under three seconds. What we proved: a 3,100-times speedup over manual
+analysis, a 97.7 percent citation rate, full source coverage on every
+entity tested, and 219 unit tests validating every layer. And what is
+next: automated data refresh, on-demand coverage for any public company,
+and integration of private and international sources to push the system
+beyond its current boundaries.
+
+[ Hand off to Jacob ]
+
 ================================================================
-JACOB KURIAKOSE — Slide 15 + Close              [ PLACEHOLDER ]
+JACOB KURIAKOSE — Slide 16 + Close              [ PLACEHOLDER ]
 ================================================================
 
 ------------------------------------------------------------------------
-Slide 15 — The Team                              [~20 sec + demo time]
+Slide 16 — The Team                              [~20 sec + demo time]
 ------------------------------------------------------------------------
 
 [ PLACEHOLDER — Jacob to fill in ]
