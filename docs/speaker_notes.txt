@@ -1,6 +1,6 @@
 SPEAKER SCRIPT — Autonomous OSINT Investigation Swarm
 FSE 570 Capstone · Spring 2026
-Target: 6 minutes (Slides 1–13) + Demo (Jacob, no fixed time)
+Target: 6 minutes (Slides 1–9, 11–14) + Demo (Jacob, no fixed time)
 
 ================================================================
 SPEAKER OVERVIEW
@@ -9,8 +9,8 @@ SPEAKER OVERVIEW
   Taljinder Singh   Slides 1–3    Introduction, Problem, Deliverables     ~1 min 30 sec
   Arnab Mitra       Slides 4–6    Architecture, Diagram, LLM Integration   ~1 min 30 sec
   Raj Kumar Mahto   Slides 7–9    Data Sources, Agents, Pipeline           ~1 min 30 sec
-  Aditya Pokharna   Slides 10–13  Evaluation (×3), Design Decisions        ~1 min 30 sec
-  Jacob Kuriakose   Slide 14 + Demo  Team intro + live demo                [PLACEHOLDER]
+  Aditya Pokharna   Slides 11–14  Evaluation (×3), Design Decisions, Limitations  ~1 min 30 sec
+  Jacob Kuriakose   Slide 10 (Demo) + Slide 15  Demo + Team close         [PLACEHOLDER]
 
 ================================================================
 TALJINDER SINGH — Slides 1, 2, 3
@@ -145,7 +145,7 @@ Slide 10 - Demo (Jacob) TBD
 
 [Handoff to Aditya]
 ================================================================
-ADITYA POKHARNA — Slides 11, 12, 13, 14,15
+ADITYA POKHARNA — Slides 11, 12, 13, 14
 ================================================================
 
 ------------------------------------------------------------------------
@@ -184,7 +184,7 @@ and a full deployment runbook. Speed: 3,100 times faster than manual.
 All five criteria are met.
 
 ------------------------------------------------------------------------
-Slide 14 — Design Decisions                                    [~30 sec]
+Slide 13 — Design Decisions                                    [~30 sec]
 ------------------------------------------------------------------------
 
 Six decisions shaped the architecture. LLM drives orchestration, but
@@ -200,9 +200,45 @@ with no external dependencies at runtime.
 
 
 ------------------------------------------------------------------------
+Slide 14 — Limitations / Future Work                           [~30 sec]
+------------------------------------------------------------------------
+
+No system is finished — and acknowledging that matters. Three current
+limitations: first, the data is only as fresh as the last pull — OFAC,
+court records, and GDELT go stale without a manual refresh. Second, the
+GDELT signal is English-only, so adverse media in other languages is
+missed entirely. Third, the LLM narrative is contract-bound but not
+sentence-level verified against individual evidence rows.
+
+On the future work side: the most impactful next step is automated
+nightly data refresh, removing the manual pull requirement. After that,
+removing the five-entity cache ceiling so any public company resolves at
+query time. And longer term, integrating licensed sources like
+OpenCorporates or Dun & Bradstreet to cover private and international
+entities.
+
+================================================================
+JACOB KURIAKOSE — Slide 15 + Close              [ PLACEHOLDER ]
+================================================================
+
+------------------------------------------------------------------------
 Slide 15 — The Team                              [~20 sec + demo time]
 ------------------------------------------------------------------------
 
-Aditya will say thank you.
+[ PLACEHOLDER — Jacob to fill in ]
+
+Suggested content:
+  - Brief team introduction (~10 sec — the slide already shows each
+    person's name and area).
+  - Transition line into the demo:
+    "Let me show you what this looks like in practice."
+
+Demo walkthrough (suggested 2–3 min):
+  1. Open  https://osint-investigation-swarm.onrender.com
+  2. Type:  Investigate Tesla for money laundering  →  Submit
+  3. Overview tab  — point to the LLM narrative and key risk metrics
+  4. Knowledge Graph tab  — highlight the interactive canvas
+  5. Evidence tab  — scroll to show citation links
+  6. Close with:  "Happy to take any questions."
 
 
